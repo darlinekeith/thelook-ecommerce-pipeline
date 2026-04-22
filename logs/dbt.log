@@ -1,0 +1,31 @@
+[0m20:16:24.525882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a9b9d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d6c7e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d6e0b10>]}
+
+
+============================== 20:16:24.527911 | d811422b-8313-499d-8e7b-830f31864c2d ==============================
+[0m20:16:24.527911 [info ] [MainThread]: Running with dbt=1.11.8
+[0m20:16:24.528146 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'write_json': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'log_format': 'default', 'no_print': 'None', 'indirect_selection': 'eager', 'static_parser': 'True', 'warn_error': 'None', 'use_colors': 'True', 'debug': 'False', 'profiles_dir': '/Users/admin/.dbt', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'version_check': 'True', 'log_path': 'logs', 'log_cache_events': 'False', 'invocation_command': 'dbt init thelook_pipeline'}
+[0m20:16:24.534569 [info ] [MainThread]: Creating dbt configuration folder at /Users/admin/.dbt
+[0m20:16:24.535290 [debug] [MainThread]: Starter project path: /Users/admin/thelook-ecommerce-pipeline/dbt-env/lib/python3.11/site-packages/dbt/include/starter_project
+[0m20:16:24.537799 [info ] [MainThread]: 
+Your new dbt project "thelook_pipeline" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m20:16:24.537935 [info ] [MainThread]: Setting up your profile.
+[0m20:18:51.389992 [info ] [MainThread]: Profile thelook_pipeline written to /Users/admin/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m20:18:52.166317 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 147.67094, "process_in_blocks": "0", "process_kernel_time": 0.231231, "process_mem_max_rss": "207896576", "process_out_blocks": "0", "process_user_time": 0.77407}
+[0m20:18:52.169906 [debug] [MainThread]: Command `dbt init` succeeded at 20:18:52.169564 after 147.68 seconds
+[0m20:18:52.171199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d64de50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d6a8c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d3ded50>]}
+[0m20:18:52.172006 [debug] [MainThread]: Flushing usage events
+[0m20:18:53.164362 [debug] [MainThread]: An error was encountered while trying to flush usage events

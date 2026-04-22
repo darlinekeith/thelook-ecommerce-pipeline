@@ -1,0 +1,3 @@
+dbt-env/
+thelook_pipeline/target/
+thelook_pipeline/dbt_packages/

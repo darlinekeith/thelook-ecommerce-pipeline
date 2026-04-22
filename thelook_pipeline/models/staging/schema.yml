@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Staged orders from theLook eCommerce"
+    columns:
+      - name: order_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: status
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Complete', 'Cancelled', 'Returned', 'Shipped', 'Processing']
+
+  - name: stg_order_items
+    description: "Staged order items from theLook eCommerce"
+    columns:
+      - name: order_item_id
+        tests:
+          - unique
+          - not_null
+      - name: sale_price
+        tests:
+          - not_null
+
+  - name: stg_products
+    description: "Staged products from theLook eCommerce"
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_users
+    description: "Staged users from theLook eCommerce"
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
