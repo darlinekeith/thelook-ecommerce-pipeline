@@ -186,4 +186,4 @@ dagster dev -f definitions.py   # Opens UI at localhost:3000
 ## 👩‍💻 Author
 
 **Darline** — Data Engineering Portfolio Project  
-Built as part of a 4-week self-directed upskill plan using $0 in tooling costs.
+Built as part of a 4-week self-directed upskill plan
