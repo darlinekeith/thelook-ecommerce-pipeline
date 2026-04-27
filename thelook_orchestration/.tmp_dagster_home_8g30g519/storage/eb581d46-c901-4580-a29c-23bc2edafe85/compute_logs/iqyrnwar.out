@@ -1,0 +1,28 @@
+Running with dbt=1.11.8
+Registered adapter: bigquery=1.11.1
+[[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.thelook_pipeline.example
+Found 6 models, 11 data tests, 4 sources, 539 macros
+
+Concurrency: 1 threads (target='dev')
+
+WARNING:google.auth._default:No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+1 of 6 START sql view model thelook_models.stg_order_items ..................... [RUN]
+1 of 6 OK created sql view model thelook_models.stg_order_items ................ [[32mCREATE VIEW (0 processed)[0m in 2.11s]
+2 of 6 START sql view model thelook_models.stg_orders .......................... [RUN]
+2 of 6 OK created sql view model thelook_models.stg_orders ..................... [[32mCREATE VIEW (0 processed)[0m in 2.29s]
+3 of 6 START sql view model thelook_models.stg_products ........................ [RUN]
+3 of 6 OK created sql view model thelook_models.stg_products ................... [[32mCREATE VIEW (0 processed)[0m in 1.67s]
+4 of 6 START sql view model thelook_models.stg_users ........................... [RUN]
+4 of 6 OK created sql view model thelook_models.stg_users ...................... [[32mCREATE VIEW (0 processed)[0m in 2.06s]
+5 of 6 START sql view model thelook_models.revenue_by_month .................... [RUN]
+5 of 6 OK created sql view model thelook_models.revenue_by_month ............... [[32mCREATE VIEW (0 processed)[0m in 2.00s]
+6 of 6 START sql view model thelook_models.top_products ........................ [RUN]
+6 of 6 OK created sql view model thelook_models.top_products ................... [[32mCREATE VIEW (0 processed)[0m in 2.87s]
+
+Finished running 6 view models in 0 hours 0 minutes and 16.73 seconds (16.73s).
+
+[32mCompleted successfully[0m
+
+Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=6

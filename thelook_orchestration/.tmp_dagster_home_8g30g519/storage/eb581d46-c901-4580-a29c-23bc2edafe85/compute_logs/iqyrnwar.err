@@ -1,0 +1,38 @@
+[32m2026-04-27 18:35:58 +0300[0m - dagster - [34mDEBUG[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - 13391 - LOGS_CAPTURED - Started capturing logs in process (pid: 13391).
+[32m2026-04-27 18:35:58 +0300[0m - dagster - [34mDEBUG[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - 13391 - thelook_dbt_assets - STEP_START - Started execution of step "thelook_dbt_assets".
+[32m2026-04-27 18:35:58 +0300[0m - dagster - [34mINFO[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - thelook_dbt_assets - A dbt subsetted execution is not being performed. Using the default dbt selection arguments `['--select', 'fqn:*']`.
+[32m2026-04-27 18:36:01 +0300[0m - dagster - [34mWARNING[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - thelook_dbt_assets - An error was encountered when creating a handle to the dbt adapter in Dagster.
+Traceback (most recent call last):
+  File "/Users/admin/thelook-ecommerce-pipeline/dbt-env/lib/python3.11/site-packages/dagster_dbt/core/resource.py", line 700, in cli
+    adapter = self._initialize_dbt_core_adapter(args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/thelook-ecommerce-pipeline/dbt-env/lib/python3.11/site-packages/dagster_dbt/core/resource.py", line 381, in _initialize_dbt_core_adapter
+    profile = load_profile(self.project_dir, cli_vars, self.profile, self.target)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/thelook-ecommerce-pipeline/dbt-env/lib/python3.11/site-packages/dbt/config/runtime.py", line 79, in load_profile
+    profile = Profile.render(
+              ^^^^^^^^^^^^^^^
+  File "/Users/admin/thelook-ecommerce-pipeline/dbt-env/lib/python3.11/site-packages/dbt/config/profile.py", line 404, in render
+    return cls.from_raw_profiles(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/thelook-ecommerce-pipeline/dbt-env/lib/python3.11/site-packages/dbt/config/profile.py", line 361, in from_raw_profiles
+    raise DbtProjectError("Could not find profile named '{}'".format(profile_name))
+dbt.exceptions.DbtProjectError: Runtime Error
+  Could not find profile named 'thelook_pipeline'
+[32m2026-04-27 18:36:01 +0300[0m - dagster - [34mINFO[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - thelook_dbt_assets - Copying `/Users/admin/thelook-ecommerce-pipeline/thelook_pipeline/target/partial_parse.msgpack` to `/Users/admin/thelook-ecommerce-pipeline/thelook_pipeline/target/thelook_dbt_assets-eb581d4-600a0dd/partial_parse.msgpack` to take advantage of partial parsing.
+[32m2026-04-27 18:36:01 +0300[0m - dagster - [34mINFO[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - thelook_dbt_assets - Running dbt command: `dbt run --select fqn:*`.
+[32m2026-04-27 18:36:08 +0300[0m - dagster - [34mDEBUG[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - 13391 - thelook_dbt_assets - STEP_OUTPUT - Yielded output "stg_order_items" of type "Nothing". (Type check passed).
+[32m2026-04-27 18:36:08 +0300[0m - dagster - [34mDEBUG[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - 13391 - thelook_dbt_assets - ASSET_MATERIALIZATION - Materialized value stg_order_items.
+[32m2026-04-27 18:36:10 +0300[0m - dagster - [34mDEBUG[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - 13391 - thelook_dbt_assets - STEP_OUTPUT - Yielded output "stg_orders" of type "Nothing". (Type check passed).
+[32m2026-04-27 18:36:10 +0300[0m - dagster - [34mDEBUG[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - 13391 - thelook_dbt_assets - ASSET_MATERIALIZATION - Materialized value stg_orders.
+[32m2026-04-27 18:36:12 +0300[0m - dagster - [34mDEBUG[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - 13391 - thelook_dbt_assets - STEP_OUTPUT - Yielded output "stg_products" of type "Nothing". (Type check passed).
+[32m2026-04-27 18:36:12 +0300[0m - dagster - [34mDEBUG[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - 13391 - thelook_dbt_assets - ASSET_MATERIALIZATION - Materialized value stg_products.
+[32m2026-04-27 18:36:14 +0300[0m - dagster - [34mDEBUG[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - 13391 - thelook_dbt_assets - STEP_OUTPUT - Yielded output "stg_users" of type "Nothing". (Type check passed).
+[32m2026-04-27 18:36:14 +0300[0m - dagster - [34mDEBUG[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - 13391 - thelook_dbt_assets - ASSET_MATERIALIZATION - Materialized value stg_users.
+[32m2026-04-27 18:36:16 +0300[0m - dagster - [34mDEBUG[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - 13391 - thelook_dbt_assets - STEP_OUTPUT - Yielded output "revenue_by_month" of type "Nothing". (Type check passed).
+[32m2026-04-27 18:36:16 +0300[0m - dagster - [34mDEBUG[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - 13391 - thelook_dbt_assets - ASSET_MATERIALIZATION - Materialized value revenue_by_month.
+[32m2026-04-27 18:36:19 +0300[0m - dagster - [34mDEBUG[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - 13391 - thelook_dbt_assets - STEP_OUTPUT - Yielded output "top_products" of type "Nothing". (Type check passed).
+[32m2026-04-27 18:36:19 +0300[0m - dagster - [34mDEBUG[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - 13391 - thelook_dbt_assets - ASSET_MATERIALIZATION - Materialized value top_products.
+[32m2026-04-27 18:36:19 +0300[0m - dagster - [34mINFO[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - thelook_dbt_assets - Finished dbt command: `dbt run --select fqn:*`.
+[32m2026-04-27 18:36:19 +0300[0m - dagster - [34mINFO[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - thelook_dbt_assets - op 'thelook_dbt_assets' did not yield or return expected outputs {'stg_order_items_not_null_stg_order_items_order_item_id', 'stg_orders_accepted_values_stg_orders_status__Complete__Cancelled__Returned__Shipped__Processing', 'stg_orders_not_null_stg_orders_status', 'stg_orders_not_null_stg_orders_order_id', 'stg_products_unique_stg_products_product_id', 'stg_users_unique_stg_users_user_id', 'stg_order_items_unique_stg_order_items_order_item_id', 'stg_products_not_null_stg_products_product_id', 'stg_order_items_not_null_stg_order_items_sale_price', 'stg_users_not_null_stg_users_user_id', 'stg_orders_unique_stg_orders_order_id'}.
+[32m2026-04-27 18:36:19 +0300[0m - dagster - [34mDEBUG[0m - thelook_pipeline_job - eb581d46-c901-4580-a29c-23bc2edafe85 - 13391 - thelook_dbt_assets - STEP_SUCCESS - Finished execution of step "thelook_dbt_assets" in 21.51s.
